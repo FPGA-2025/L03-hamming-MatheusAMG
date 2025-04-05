@@ -5,6 +5,14 @@ module injetor(
   output reg [14:0] saida
 );
 
-// implemente seu código aqui
+always @(*) begin
+  if (erro) begin
+    saida = entrada ^ (1 << n);
+  end
+  else begin
+    saida = entrada;
+  end
+  
+end
 
 endmodule
